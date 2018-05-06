@@ -8,6 +8,7 @@ numero = int(input('Digite o número: '))
 
 tipo = numero % 2
 
+
 if tipo == 0:
     print('O número {} é par.'.format(numero))
 else:
