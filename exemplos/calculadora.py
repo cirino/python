@@ -1,12 +1,14 @@
-print("""
+"""
     Calculadora em Python
     Day 1 Code Python - 29/04/2018
-""")
+"""
+
+print("Calculadora do Cirino\n")
 
 nome = str(input('Qual o seu nome? '))
 giria = 'Vida Loka'
 
-print('Boas vindas {}, {}!\n'.format(nome.lower().title(), giria))
+print('Boas vindas {}, {}!\n'.format(nome, giria))
 
 def selecionaCalculo():
     listCalculo = ['Calcular', 'Soma', 'Subtração', 'Divisão', 'Multiplicação']
@@ -34,16 +36,13 @@ def subtracao(a = 0, b = 0):
     aux = a - b
     print(aux)
 
-def divisao(a = 0, b = 0):
-    try:
-        a / b or b / a
-    except (RuntimeError, ZeroDivisionError) as e:
-        print(e)
-        print('Não pode dividir por 0 ou negativos: {} / {}, dããã'.format(a, b))
+def divisao(a = 1, b = 1):
+    if (b <= 0) or (a <= 0):
+        aux = 'Não pode dividir por 0 ou negativos: a / b'
     else:
-        print('{:.2f}'.format(a / b))
-    finally:
-        print('Finally')
+        aux = a / b
+    
+    print(aux)
 
 def multiplicacao(a = 0, b = 0):
     aux = a * b
